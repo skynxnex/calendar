@@ -11,3 +11,11 @@ web/bundles/*
 # Configuration files
 app/config/parameters.ini
 app/config/parameters.yml
+
+composer.lock
+composer.phar
+vendor/*
+*.zip
+atlassian-ide-plugin.xml
+.DS_Store
+.idea/*
