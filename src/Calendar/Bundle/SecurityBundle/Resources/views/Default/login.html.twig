@@ -1,0 +1,41 @@
+{% extends "CalendarCalendarBundle::index.html.twig" %}
+
+{% block content %}
+    <div class="container upper_margin">
+        <div class="row">
+            <div class="span6 offset4">
+                <h1>Log in</h1>
+            </div>
+            {% if error %}
+                <div class="text-error span6 offset3">{{ error.message }}</div>
+            {% endif %}
+            <div class="span6 offset3">
+                <form class="form-horizontal" action="{{ path('login_check') }}" method="post">
+                    <div class="control-group">
+                        <label class="control-label" for="username">Username</label>
+
+                        <div class="controls">
+                            <input type="text" name="username" id="username" value="{{ last_username }}"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="password">Password</label>
+
+                        <div class="controls">
+                            <input type="password" id="password" name="_password"/>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label class="checkbox">
+                                <input type="checkbox"> Remember me
+                            </label>
+                            <button class="btn" type="submit">Login</button>
+                        </div>
+                    </div>
+                </form>
+                <a href="{{ path('create_user') }}">Create a new user</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+calendar_security:
+    resource: "@CalendarSecurityBundle/Resources/config/routing.yml"
+    prefix:   /
+
+calendar_calendar:
+    resource: "@CalendarCalendarBundle/Resources/config/routing.yml"
+    prefix:   /
+

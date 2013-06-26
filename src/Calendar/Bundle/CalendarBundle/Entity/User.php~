@@ -1,0 +1,45 @@
+<?php
+
+    namespace Calendar\Bundle\CalendarBundle\Entity;
+
+    use Doctrine\Common\Collections\ArrayCollection;
+    use Doctrine\ORM\Mapping as ORM;
+
+    /**
+     * @ORM\Entity
+     * @ORM\Table(name="users")
+     */
+    class User
+    {
+        public function __construct()
+        {
+            $this->events = new ArrayCollection();
+        }
+
+        /**
+         * @ORM\Id
+         * @ORM\Column(type="integer")
+         * @ORM\GeneratedValue(strategy="AUTO")
+         */
+        protected $id;
+
+        /**
+         * @ORM\Column(type="string", length=100)
+         */
+        protected $name;
+
+        /**
+         * @ORM\Column(type="string", length=100)
+         */
+        protected $password;
+
+        /**
+         * @ORM\Column(type="string", length=100)
+         */
+        protected $userName;
+
+        /**
+         * @ORM\OneToMany(targetEntity="Event", mappedBy="user")
+         */
+        protected $events;
+    }

@@ -1,0 +1,7 @@
+parameters:
+#    calendar_security.example.class: Calendar\Bundle\SecurityBundle\Example
+
+services:
+#    calendar_security.example:
+#        class: %calendar_security.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

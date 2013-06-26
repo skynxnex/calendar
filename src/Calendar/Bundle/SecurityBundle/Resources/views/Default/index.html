@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        {% stylesheets 'bundles/calendarcalendar/css/*' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        <title>{% block title %}{% endblock %} - My Webpage</title>
+    {% endblock %}
+</head>
+<body>
+<div id="content">{% block content %}{% endblock %}</div>
+<div id="footer">
+    {% block footer %}
+        &copy; Copyright 2011 by <a href="http://domain.invalid/">you</a>.
+    {% endblock %}
+</div>
+</body>
+</html>

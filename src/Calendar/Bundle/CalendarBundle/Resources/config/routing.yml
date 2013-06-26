@@ -1,0 +1,9 @@
+calendar_calendar_homepage:
+    pattern:  /hello/
+    defaults: { _controller: CalendarCalendarBundle:Default:index }
+calendar_calendar_events:
+    pattern:  /events
+    defaults: { _controller: CalendarCalendarBundle:Default:events }
+calendar_save:
+    pattern: /events/{id}
+    defaults: { _controller: CalendarCalendarBundle:Default:saveEvent }

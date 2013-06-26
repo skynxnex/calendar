@@ -1,0 +1,7 @@
+parameters:
+#    calendar_calendar.example.class: Calendar\Bundle\CalendarBundle\Example
+
+services:
+#    calendar_calendar.example:
+#        class: %calendar_calendar.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
